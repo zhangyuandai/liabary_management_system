@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>user</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#box{
+			width: 100%;
+			height: 100px;
+			margin: auto;
+			position: relative;
+			background-color:  #1f222e;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}	
+		.text{
+			font-size: 20px;
+			font-weight: bold;
+			color: white;
+			position: relative;
+			margin: auto;
+			left: 44%;
+			right: 50%;
+			top: 40%;
+			bottom: 0;
+		}	
+		.navbox{
+			width: 100%;
+			height: 50px;
+			margin: auto;
+			background-color: blue;
+			position: relative;
+		}
+		
+		.button_left{
+			width: 50%;
+			height: 50px;
+			float: left;
+			margin: auto;
+			position: relative;
+			background-color: white;
+			
+		}
+		.button_left:hover{
+			background-color: #DC6180;
+			color: white;
+			cursor: pointer;
+		}
+		.button_right:hover{
+			background-color: #DC6180;
+			color: white;
+			cursor: pointer;
+		}
+		.button_right{
+			width: 50%;
+			height: 50px;
+			float: right;
+			margin: auto;
+			position: relative;
+			background-color:white;
+			cursor: pointer;
+		}
+		.boxs{
+			width: 200%;
+			height: auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.boxs_child{
+			width: 50%;
+			height: auto;
+			position: relative;
+			float: left;
+		}
+		.content{
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: auto;
+			position: relative;
+			background-color: #afb1be;
+		}
+		.content1{
+			width: 100%;
+			margin: auto;
+			position: relative;
+/*			top: 50px;*/
+/*			background-color: #afb1be;*/
+		}
+		.search{
+			width: 100%;
+			height: 25px;
+			margin: auto;
+			position: relative;
+			padding-top: 40px;
+			background-color: #afb1be;
+		}
+		.search_img{
+			position: absolute;
+			float: right;
+			right: 40px;
+			cursor: pointer;
+	/*		padding-top: 3px;*/
+			width: 3.5%;
+			z-index: 50;
+			/*left: 0;*/
+		}
+		.search_box{
+			width: 90%;
+			height: 30px;
+			margin: auto;
+			background-color: #afb1be;
+			position: relative;
+			z-index: 50;
+			left: 15px;
+			float: left;
+			outline: none;
+		}
+		.div1{
+			width: 95%;
+			height: 40px;
+			position: relative;
+			margin: auto;
+			left: 0;
+			right: 20px;
+			margin-top: 50px;
+			padding-left: 20px;
+			padding-top: 20px;
+			background-color:black;
+			opacity: 0.5;
+			color: white;
+		}
+		.div2{
+			padding-left: 20px;
+			width: 95%;
+			height: 40px;
+			position: relative;
+			margin: auto;
+			top: 0px;
+			padding-top: 20px;
+			background-color:black;
+			opacity: 0.5;
+			color: white;
+		}
+		.div3{
+			width: 100%;
+			height: 40px;
+			position: relative;
+			top: 0px;
+			padding-top: 20px;
+			padding-left: 20px;
+			background-color:black;
+			opacity: 0.5;
+			color: white;
+			margin: auto;
+		}
+		.div_child1{
+			width: 16.5%;
+			height: 40px;
+			position: relative;
+			float: left;
+			text-align: center;
+		}
+		.div_child2{
+			width: 16.5%;
+			height: 40px;
+			position: relative;
+			float: left;
+			text-align: center;
+		}
+		.div_borrow{
+			width: 16.5%;
+			height: 40px;
+			position: relative;
+			float: left;
+			text-align: center;
+		}
+		.reduce_name{
+			width: 50%;
+			height: 40px;
+			position: relative;
+			text-align: center;
+			float: left;
+		}
+		.reduce_mark{
+			width: 40%;
+			height: 40px;
+			position: relative;
+			text-align: center;
+			float: left;
+		}
+		.content_person{
+			position: relative;
+			width: 100%;
+			height: auto;
+			margin: auto;
+			position: relative;
+			background-color: #afb1be;
+		}				
+	</style>
+</head>
+<body>
+	<div id="box">
+		<span class="text">欢迎来到西邮图书馆</span>
+	</div>
+	<div class="navbox">
+			<input type="button" value="图书检索" class="button_left">
+			<input type="button" name="" value="我的借阅" class="button_right">
+	</div>
+	<div class="boxs">
+		<div class="boxs_child">
+			<div class="content">
+				<div class="search">
+					<img src="search.png" class="search_img">
+					<input type="text"  class="search_box">
+				</div>	
+				<div class="div1">
+					<div class="div_child1"><span>图书编号</span></div>
+					<div class="div_child1"><span>名字</span></div>
+					<div class="div_child1"><span>作者</span></div>
+					<div class="div_child1"><span>出版社</span></div>
+					<div class="div_child1"><span>可借阅数量</span></div>
+					<div class="div_child1"><span>借阅</span></div>
+				</div>
+			</div>
+			<div class="content1"></div>		
+		</div>
+		<div class="boxs_child">
+			<div class="content_person">
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">	
+	//获取跳转后的phone;
+	var phone =  window.location.href.split('?')[1];
+	var t = document.getElementsByClassName('search_img');
+	var button_left = document.getElementsByClassName('button_left')[0];
+	var button_right = document.getElementsByClassName('button_right')[0];
+	button_right.onclick = function(){
+		var dudu = document.getElementsByClassName('boxs')[0];
+		var haha = document.getElementsByClassName('content_person')[0];
+		dudu.style.left = -100+"vw";
+		str = 'http://localhost:1337/user/findperson?phone='+phone;
+		result =callback(str);
+		if(!result.err){
+			// var haha = document.getElementsByClassName('content1')[0];
+			result =  result.result;
+			t = result.length; 
+			for(let i=0;i<t;i++){
+				personbook(result,i,haha);
+			}
+		}	
+		else{
+			alert(result.result);
+		}
+	}
+	button_left.onclick = function(){
+		var dudu = document.getElementsByClassName('boxs')[0];
+		dudu.style.left = 0+"vw";
+
+	}
+	t[0].onclick=function(){
+		var text = document.getElementsByClassName('search_box')[0].value;
+		var haha = document.getElementsByClassName('content1')[0];
+		haha.innerText = "";
+		if(text=='*'){
+			str = 'http://localhost:1337/user/findall/';
+			var result = callback(str);
+			if(!result.err){
+				var t = result.result.length;
+				result = result.result;
+				for(let i=0;i<t;i++){
+					creatediv(result,i,haha);
+				}
+			}
+			else{
+				alert(result.result);
+			}
+		}
+		else{
+			name = text;
+			str = 'http://localhost:1337/user/findbook?name='+name;
+			var result = callback(str);
+			if(!result.err){
+				var t = result.result.length;
+				result = result.result
+				for(let j=0;j<t;j++){
+					creatediv(result,j,haha)
+				}
+			}
+			else{
+				alert(result.result);
+			}
+		} 
+	}
+	function creatediv(result,i,haha){
+		var num = result[i].num;
+		var name = result[i].name;	
+		var div1 = document.createElement("div");
+		var div2 = document.createElement('div');
+		var div3 = document.createElement('div');
+		var div4 = document.createElement('div');
+		var div5 = document.createElement('div');
+		var div6 = document.createElement('div');
+		var div7 = document.createElement('div');	
+		div1.className = "div2";
+		div2.className = "div_child2";
+		div3.className = "div_child2";
+		div4.className = "div_child2";
+		div5.className = "div_child2";
+		div6.className = "div_child2";
+		div7.className = "div_borrow"
+		div2.innerText = result[i].name;
+		div3.innerText = result[i].writer;
+		div4.innerText = result[i].address;
+		div5.innerText = result[i].num;
+		div6.innerText = result[i].id;
+		div7.innerText = "借阅";
+		div1.appendChild(div6);
+		div1.appendChild(div2);
+		div1.appendChild(div3);
+		div1.appendChild(div4);
+		div1.appendChild(div5);
+		div1.appendChild(div7);
+		haha.appendChild(div1);
+		div7.onclick = function(){
+			var str = 'http://localhost:1337/user/borrow?name='+result[i].name+"&phone="+phone;
+			results = callback(str);
+			if(!results.err){
+				num = num-1;
+				var str = 'http://localhost:1337/user/update?name='+result[i].name+"&num="+num;
+				resultss = callback(str);
+				if(!resultss.err){
+					alert(resultss.result)
+				} 
+				else{
+					alert(resultss.result);
+				}
+			}
+			else{
+				alert(results.result);
+			}
+		}
+
+	}
+/////////////////我的借阅
+
+	function personbook(result,i,haha){
+		var name = result[i].name;	
+		var div1 = document.createElement("div");
+		var div2 = document.createElement('div');
+		var div3 = document.createElement('div');	
+		div1.className = "div3";
+		div2.className = "reduce_name";
+		div3.className = "reduce_mark";
+		div2.innerText = result[i].name;
+		div3.innerText = "还书";
+		div1.appendChild(div2);
+		div1.appendChild(div3);
+		haha.appendChild(div1);
+		div3.onclick = function(){
+			var str = 'http://localhost:1337/user/still?name='+name+"&phone="+phone;
+			results = callback(str);
+			console.log(results)
+			if(!results.err){
+				alert(results.result);
+			}
+			else{
+				alert(results.result);
+			}
+		}
+
+	}
+		//封装ajax请求
+	function callback(str){
+		var obj;
+		var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		// IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		// IE6, IE5 浏览器执行代码
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			 obj = JSON.parse(xmlhttp.responseText);
+		}
+	}
+	xmlhttp.open("GET",str,false);
+	xmlhttp.send();
+	return obj;
+	}
+</script>
+
+</body>
+</html>

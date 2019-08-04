@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+		input{
+			outline: none;
+		}
+		img{
+			margin-left: 5px;
+			width: 24px;
+			height: 24px;
+			margin-top: 3px;
+		}
+		.login{
+			/*display: none;*/
+			width: 260px;
+			height: 250px;
+			margin: auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			border: 2px;
+			padding: 100px 10px 20px 30px;
+			background-color: #1f222e ;
+			opacity: 1;
+		}
+		.login_title{
+			width: 240px;
+			height:35px;
+			margin: auto;
+			font-size:20px;
+			color: #afb1be;
+			font-family: 'Gudea',sans-serif;
+		}
+		.login_fields{
+			width:300px;
+			height:200px;
+			position: absolute;
+			left:0;
+		}
+		.login_fields_user{
+			width: 300px;
+			height: 40px;
+			position: relative;
+			
+		}
+		.login_fields_pas{
+			width: 300px;
+			height: 40px;
+			position: absolute;
+			background-color: #1f222e ;
+		}
+		.icon{
+			width: 300px;
+			height:30px;
+			position: absolute;
+			z-index: 50;
+			top: 8px;
+			opacity: 0.5;
+			background-color: #afb1be;
+		}
+		.input_text{
+			width: 250px;
+			height:23px;
+			margin-top: 3.5px;
+			position: absolute;
+			text-indent: 10px;
+			line-height: 23px;
+			border-width: 0px;
+			background-color: #afb1be;
+			outline: none;
+		}
+		.login_fields_submit{
+			width: 80%;
+			height:50px;
+			top: 120px;
+			position: relative;
+			left: 0;
+			right: 0;
+			margin: auto;
+
+		}
+		.submit_style:hover{
+			color: white;
+			background-color:#DC6180;
+			cursor: pointer;
+		}
+		
+		.submit_login{
+			width: 100px;
+			height: 40px;
+			float: left;
+			top:5px;
+			border-radius:20px;
+		}
+		.submit_register{
+			width: 100px;
+			height: 40px;
+			top:5px;
+			float: right;
+			border-radius:20px;
+		}
+		.submit_style{
+			width: 80px;
+			height: 40px;
+			border-radius:20px;
+			top:5px;
+			border-width: 0px;
+			position: absolute;
+		}
+		body{
+			background-image: url('2.jpg');
+			background-repeat: no-repeat;
+			background-size: 100%;
+		}
+		.login1{
+			width: 260px;
+			height: 280px;
+			margin: auto;
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			border: 2px;
+			padding: 100px 10px 20px 30px;
+			background-color: #1f222e ;
+			opacity: 1;
+			display: none;
+		}
+		.login_fields_submit1{
+			width: 80%;
+			height:50px;
+			top: 180px;
+			position: relative;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="login">
+		<div class="login_title">
+			<span >登录</span>
+		</div>
+		<div class="login_fields">
+			<div class="login_fields_user">
+				<div class="icon">
+					<img src="login_user.png">
+						<input type="text" placeholder="用户名" class="input_text">
+				</div>
+			</div>
+			<div class="login_fields_pas">
+				<div class="icon">
+					<img src="login_pas.png" >
+					<input type="password" placeholder="密码" class="input_text" >
+				</div>
+			</div>
+		</div>
+		<div class="login_fields_submit">
+			<div class="submit_login">
+				<input type="submit" value="登录" class="submit_style" >
+			</div>
+			<div class="submit_register">
+				<input type="button" value="注册" class="submit_style">
+			</div>
+		</div>
+	</div>
+	<div class="login1">
+		<div class="login_title">
+			<span >注册</span>
+		</div>
+		<div class="login_fields">
+			<div class="login_fields_user">
+				<div class="icon">
+					<img src="用户.png">
+				<input type="text" placeholder="请输入昵称" class="input_text">
+				</div>
+				
+			</div>
+			<div class="login_fields_user">
+				<div class="icon">
+				<img src="手机号.png">
+				<input type="text" placeholder="请填写您的手机号" class="input_text">
+			</div>
+			</div>
+			<div class="login_fields_user">
+				<div class="icon">
+				<img src="密匙.png">
+				<input type="password" placeholder="密码" class="input_text">
+			</div>
+			</div>
+			<div class="login_fields_user">
+				<div class="icon">
+				<img src="密匙.png">
+				<input type="password" placeholder="请再次输入密码" class="input_text">
+			</div>
+			</div>
+
+		</div>
+		<div class="login_fields_submit1">
+			<div class="submit_login">
+				<input type="button" value="返回" class="submit_style" >
+			</div>
+			<div class="submit_register">
+				<input type="submit" value="确认注册" class="submit_style">
+			</div>
+		</div>
+	</div>
+	</div>
+	<script type="text/javascript">
+		var t = document.getElementsByClassName('submit_style');
+		t[0].onclick = function(){
+			var text = document.getElementsByClassName('input_text');
+			phone = text[0].value;password = text[1].value;
+			str = 'http://localhost:1337/user/login?phone='+phone+'&password='+password;
+			result = callback(str);
+			if(!result.err){
+				//跳转页面传参数
+				if(phone==12345&&password==12345){
+					window.location.href='administrator.html?';
+				}
+				else{
+					window.location.href='user.html?'+phone;
+				}
+			}
+			else{
+				alert(result.result);
+			}
+		}
+		t[1].onclick = function(){
+			var a=document.getElementsByClassName('login1');
+			var b=document.getElementsByClassName('login');
+			a[0].style.display = "inline";
+			b[0].style.display = "none";
+		}
+		
+		t[2].onclick = function(){
+			var a=document.getElementsByClassName('login1');
+			var b=document.getElementsByClassName('login');
+			a[0].style.display = "none";
+			b[0].style.display = "inline";
+			
+		}
+		
+		t[3].onclick = function(){
+			var name,phone,password,npassword;
+			var a=document.getElementsByClassName('login1');
+			var b=document.getElementsByClassName('login');
+			var text = document.getElementsByClassName('input_text');//2345
+			name=text[2].value;phone= text[3].value;password = text[4].value;npassword = text[5].value;
+			if(npassword==password){
+				str = 'http://localhost:1337/user/register?name='+name+'&phone='+phone+'&password='+password;
+				result = callback(str);
+				if(!result.err){
+					a[0].style.display = "none";
+					b[0].style.display = "inline";
+					alert(result.result);
+
+				}
+				else{
+					alert(result.result);
+				}
+			}
+			else{
+				alert("两个密码不相同")
+			}
+		}
+		//封装ajax请求
+	function callback(str){
+		var obj;
+		var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		// IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		// IE6, IE5 浏览器执行代码
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			 obj = JSON.parse(xmlhttp.responseText);
+		}
+	}
+	xmlhttp.open("GET",str,false);
+	xmlhttp.send();
+	return obj;
+	}
+	</script>
+</body>
+</html>

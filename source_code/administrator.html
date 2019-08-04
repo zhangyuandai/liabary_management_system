@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>administrator</title>
+	<meta charset="UTF-8">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		#box{
+			width: 100%;
+			height: 100px;
+			margin: auto;
+			position: relative;
+			background-color:  #1f222e;
+			left: 0;
+			right: 0;
+			top: 0;
+			bottom: 0;
+		}	
+		.text{
+			font-size: 20px;
+			font-weight: bold;
+			color: white;
+			position: relative;
+			margin: auto;
+			left: 44%;
+			right: 50%;
+			top: 40%;
+			bottom: 0;
+		}	
+		.navbox{
+			width: 100%;
+			height: 50px;
+			margin: auto;
+			background-color: blue;
+			position: relative;
+		}
+		
+		.button_left{
+			width: 50%;
+			height: 50px;
+			float: left;
+			margin: auto;
+			position: relative;
+			background-color: white;
+			
+		}
+		.button_left:hover{
+			background-color: #DC6180;
+			color: white;
+			cursor: pointer;
+		}
+		.button_right:hover{
+			background-color: #DC6180;
+			color: white;
+			cursor: pointer;
+		}
+		.button_right{
+			width: 50%;
+			height: 50px;
+			float: right;
+			margin: auto;
+			position: relative;
+			background-color:white;
+			cursor: pointer;
+		}
+		.boxs{
+			width: 100%;
+			height: auto;
+			position: relative;
+			overflow: hidden;
+		}
+		.boxs_child{
+			width: 200%;
+			height: auto;
+			position: relative;
+			background-color: green;
+		}
+		.content{
+			width: 50%;
+			height: auto;
+			float: left;
+			position: relative;
+/*			background-color: #afb1be;*/
+		}
+		.content1{
+			width: 50%;
+			float: left;
+			height: auto;
+			position: relative;
+/*			background-color: #afb1be;*/
+		}
+
+		.search{
+			width: 100%;
+			height: 25px;
+			margin: auto;
+			position: relative;
+			top: 40px;
+			background-color: #afb1be;
+		}
+		.search_img{
+			position: absolute;
+			float: right;
+			right: 40px;
+			cursor: pointer;
+	/*		padding-top: 3px;*/
+			width: 3.5%;
+			z-index: 50;
+			/*left: 0;*/
+		}
+		.search_box{
+			width: 90%;
+			height: 30px;
+			margin: auto;
+			background-color: #afb1be;
+			position: relative;
+			z-index: 50;
+			left: 15px;
+			float: left;
+			outline: none;
+		}
+		.div1{
+			width: 100%;
+			height: 40px;
+			position: relative;
+			margin: auto;
+			left: 0;
+/*			padding-left: 20px;*/
+			padding-top: 20px;
+			background-color:black;
+			opacity: 0.5;
+			color: white;
+		}
+		.div2{
+			width: 100%;
+			height: 40px;
+			position: relative;
+			margin: auto;
+			left: 0;
+/*			padding-left: 20px;*/
+			padding-top: 20px;
+			background-color:black;
+			opacity: 0.5;
+			color: white;
+		}
+		.div1_child1{
+			width: 13.5%;
+			height: 40px;
+			position: relative;
+			float: left;
+			text-align: center;
+		}
+		.div1_child2{
+			width: 13.5%;
+			height: 40px;
+			position: relative;
+			float: left;
+			text-align: center;
+		}
+		.add{
+			width: 50%;
+			height: 40px;
+			position: relative;
+			margin: auto;
+			padding-top: 15px;
+		}
+		.input_add{
+			width: 100%;
+			height: 100%;
+			background-color: #afb1be;
+			line-height: 40px;
+			font-size: 20px;
+			outline: none;
+			text-indent: 15px;		
+		}
+		.content_child{
+			width: 100%;
+			height: auto;
+			position: relative;
+		}
+		.reduce{
+			width: 13.5%;
+			height: 40px;
+			position: relative;
+			float: left;
+			text-align: center;
+		}	
+		.increment{
+			width: 13.5%;
+			height: 40px;
+			position: relative;
+			float: left;
+			text-align: center;	
+		}		
+	</style>
+</head>
+<body>
+	<div id="box">
+		<span class="text">欢迎来到西邮图书馆</span>
+	</div>
+	<div class="navbox">
+			<input type="button" value="图书管理" onclick="school()" class="button_left">
+			<input type="button" name="" value="添加图书" class="button_right">
+	</div>
+	<div class="boxs">
+		<div class="boxs_child">
+			<div class="content">
+<!-- 				<div class="search">
+					<img src="search.png" class="search_img">
+					<input type="text"  class="search_box">
+				</div>	 -->
+				<div class="div1">
+					<div class="div1_child1"><span>图书编号</span></div>
+					<div class="div1_child1"><span>名字</span></div>
+					<div class="div1_child1"><span>作者</span></div>
+					<div class="div1_child1"><span>出版社</span></div>
+					<div class="div1_child1"><span>可借阅数量</span></div>
+					<div class="div1_child1"><span>减一本</span></div>
+					<div class="div1_child1"><span>加一本</span></div>
+				</div>
+				<div class="content_child"></div>
+			</div>
+			<div class="content1">
+				<div class="add">
+					<input class="input_add" placeholder="书名" type="" name="">
+				</div>
+				<div class="add">
+					<input class="input_add" placeholder="作者" type="" name="">
+				</div>
+				<div class="add">
+					<input class="input_add" placeholder="出版社" type="" name="">
+				</div>
+				<div class="add">
+					<input class="input_add" placeholder="可借数量" type="" name="">
+				</div>
+				<div class="add">
+					<input class="input_add" type="button" onclick="add()" value="提交" name="">
+				</div>
+			</div>		
+		</div>
+	</div>
+<!-- 	<div class="content1">
+
+	</div> -->
+<script type="text/javascript">	
+	var phone = 123456
+	var t = document.getElementsByClassName('search_img');
+	var button_left = document.getElementsByClassName('button_left')[0];
+	var button_right = document.getElementsByClassName('button_right')[0];
+	button_right.onclick = function(){
+		var dudu = document.getElementsByClassName('boxs_child')[0];
+		dudu.style.left = -100+"vw";
+	}
+	school();
+	function school(){
+		var dudu = document.getElementsByClassName('boxs_child')[0];
+		var lala = document.getElementsByClassName('content_child')[0];
+		lala.innerText ="";
+		dudu.style.left = 0+"vw";
+		str = 'http://localhost:1337/user/findall?';
+		var result = callback(str);
+		if(!result.err){
+			var haha = document.getElementsByClassName('content_child')[0];
+			result = result.result;
+			for(let i=0;i<result.length;i++){
+				creatediv(result,i,haha);
+				num = result[i].num;
+			}
+		}
+		else{
+			alert(result.result)
+		}
+
+	}
+	// t[0].onclick=function(){
+	// 	var text = document.getElementsByClassName('search_box')[0].value;
+	// 	if(text=='*'){
+	// 		str = 'http://localhost:1337/user/findall/';
+	// 		var result = callback(str);
+	// 		console.log(result);
+	// 		if(!result.err){
+	// 			alert("你好");
+	// 		}
+	// 		else{
+	// 			alert(result.result);
+	// 		}
+	// 	}
+	// 	else{
+	// 		name = text;
+	// 		str = 'http://localhost:1337/user/findbook?name='+name;
+	// 		var result = callback(str);
+	// 		if(!result.err){
+	// 			var haha = document.getElementsByClassName('content')[0];
+	// 			var t = result.result.length;
+	// 			result = result.result
+	// 			for(let j=0;j<t;j++){
+	// 				creatediv(result,t,haha)
+	// 			}
+	// 		}
+	// 		else{
+	// 			alert(result.result);
+	// 		}
+	// 	} 
+	// }
+	function creatediv(result,i,haha){
+		var num = result[i].num;
+		var name = result[i].name;	
+		var div1 = document.createElement("div");
+		var div2 = document.createElement('div');
+		var div3 = document.createElement('div');
+		var div4 = document.createElement('div');
+		var div5 = document.createElement('div');
+		var div6 = document.createElement('div');
+		var div7 = document.createElement('div');
+		var div8 = document.createElement('div');	
+		div1.className = "div2";
+		div2.className = "div1_child2";
+		div3.className = "div1_child2";
+		div4.className = "div1_child2";
+		div5.className = "div1_child2";
+		div6.className = "div1_child2";
+		div7.className = "reduce";
+		div8.className = "increment";
+		div2.innerText = result[i].name;
+		div3.innerText = result[i].writer;
+		div4.innerText = result[i].address;
+		div5.innerText = result[i].num;
+		div6.innerText = result[i].id;
+		div7.innerText = "减";
+		div8.innerText = "加";
+		div1.appendChild(div6);
+		div1.appendChild(div2);
+		div1.appendChild(div3);
+		div1.appendChild(div4);
+		div1.appendChild(div5);
+		div1.appendChild(div7);
+		div1.appendChild(div8);
+		haha.appendChild(div1);
+		div7.onclick = function(){
+			num = num-1;
+			str = "http://localhost:1337/user/update?name="+name+"&num="+num;
+			var results = callback(str);
+			if(!results.err){
+				alert(results.result);
+			}
+			else{
+				alert(results.result);
+			}
+		}
+		div8.onclick = function(){
+			num = num+1;
+			str = "http://localhost:1337/user/update?name="+name+"&num="+num;
+			var results = callback(str);
+			if(!results.err){
+				alert(results.result);
+			}
+			else{
+				alert(results.result);
+			}
+		}
+	}
+	/////////////////添加图书
+	function add(){
+		var input_add = document.getElementsByClassName('input_add');
+		name = input_add[0].value;writer = input_add[1].value;address = input_add[2].value;num = input_add[3].value;
+		str = "http://localhost:1337/user/upload?name="+name+"&writer="+writer+"&address="+address+"&num="+num;
+		result = callback(str);
+		if(!result.err){
+			alert(result.result);
+		}
+		else{
+			alert(result.result);
+		} 
+	}
+	//封装ajax请求
+	function callback(str){
+		var obj;
+		var xmlhttp;
+	if (window.XMLHttpRequest)
+	{
+		// IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+		xmlhttp=new XMLHttpRequest();
+	}
+	else
+	{
+		// IE6, IE5 浏览器执行代码
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+			 obj = JSON.parse(xmlhttp.responseText);
+		}
+	}
+	xmlhttp.open("GET",str,false);
+	xmlhttp.send();
+	return obj;
+	}
+</script>
+
+</body>
+</html>
